@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Submission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #e21a21;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #welcome-message {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="welcome-message"></div>
+    
+    <form>
+        <label for="course">Course:</label>
+        <select id="course" name="course">
+            <option value="math">Math</option>
+            <option value="science">Science</option>
+            <option value="english">English</option>
+        </select>
+
+        <label for="assignment">Assignment:</label>
+        <select id="assignment" name="assignment">
+            <option value="assignment1">Assignment 1</option>
+            <option value="assignment2">Assignment 2</option>
+            <option value="assignment3">Assignment 3</option>
+        </select>
+
+        <label for="student">Student:</label>
+        <select id="student" name="student">
+            <option value="john">John Doe</option>
+            <option value="jane">Jane Smith</option>
+            <option value="bob">Bob Johnson</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+    const accessToken = '22592~H3ECHgzCZAEwzFEVbLgqUQVGa4KyEjtLdHG4czzu9wOPADnvm4ojxpe0U3Y1T07b'; // Replace 'your_bearer_token' with your actual token
+
+    // Fetch data from the API with Authorization Bearer token and "no-cors" mode
+    fetch('https://utampa.instructure.com/api/v1/users/self', {
+        method: 'GET', // Specify the HTTP method
+        mode: 'cors', // Set the mode to "cors"
+        headers: {
+            'Authorization': `Bearer ${accessToken}`,
+            'Content-Type': 'application/json', // Specify the content type if needed
+        },
+    })
+    .then(response => {
+        // Handle the response as needed, keeping in mind the limitations of "no-cors" mode
+        console.log('Response:', response);
+    })
+    .catch(error => console.error('Error fetching user data:', error));
+</script>
+
+</body>
+</html>
