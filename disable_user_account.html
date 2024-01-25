@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disable User Account - GUI Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #logo {
+      width: 753px; /* Adjust the width as needed */
+      height: 99px; /* Adjust the height as needed */
+      margin-bottom: 20px; /* Add bottom margin */
+    }
+
+    #container {
+      width: 753px; /* Adjust the width as needed */
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      color: #000000;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    label {
+      color: #000000;
+      margin-bottom: 8px;
+    }
+
+    .input-container {
+      display: flex;
+      justify-content: center; /* Center the text and input */
+      align-items: center;
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    input {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      max-width: 300px; /* Adjust the maximum width as needed */
+      margin-left: 5px;
+    }
+
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .checkbox-container label {
+      margin-right: 8px;
+    }
+
+    button {
+      background-color: #e21a21;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #c01717;
+    }
+
+    .back-to-home {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #e21a21; /* Link color */
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <img id="logo" src="SpartanLearn.png" alt="SpartanLearn Logo">
+
+  <div id="container">
+    <h1>Disable a User Account</h1>
+    
+    <form>
+      <div class="input-container">
+        <label for="utId">UT ID:</label>
+        <input type="text" id="utId" name="utId" required>
+      </div>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="disableCanvas" name="disableCanvas">
+        <label for="disableCanvas">Disable user's Canvas account?</label>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <a href="front_page.html" class="back-to-home">Back to Home</a>
+
+</body>
+</html>

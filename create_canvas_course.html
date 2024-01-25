@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Canvas Course - GUI Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #logo {
+      width: 753px; /* Adjust the width as needed */
+      height: 99px; /* Adjust the height as needed */
+      margin-bottom: 20px; /* Add bottom margin */
+    }
+
+    #container {
+      width: 753px; /* Adjust the width as needed */
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      color: #000000;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    label {
+      color: #000000;
+      margin-bottom: 8px;
+    }
+
+    input, select {
+      margin-bottom: 16px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      max-width: 300px; /* Adjust the maximum width as needed */
+    }
+
+    button {
+      background-color: #e21a21;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #c01717;
+    }
+
+    .back-to-home {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #e21a21; /* Link color */
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <img id="logo" src="SpartanLearn.png" alt="SpartanLearn Logo">
+
+  <div id="container">
+    <h1>Create a Canvas Course</h1>
+    
+    <form>
+      <div class="input-container">
+        <label for="courseName">Course Name:</label>
+        <input type="text" id="courseName" name="courseName" required>
+      </div>
+
+      <div class="input-container">
+        <label for="fullCourseId">Full Course ID:</label>
+        <input type="text" id="fullCourseId" name="fullCourseId" required>
+      </div>
+
+      <div class="input-container">
+        <label for="term">Term:</label>
+        <select id="term" name="term">
+          <option value="term1">Term 1</option>
+          <option value="term2">Term 2</option>
+          <option value="term3">Term 3</option>
+        </select>
+      </div>
+
+      <button type="submit">Create Course</button>
+    </form>
+  </div>
+
+  <a href="front_page.html" class="back-to-home">Back to Home</a>
+
+</body>
+</html>
